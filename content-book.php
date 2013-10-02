@@ -32,3 +32,10 @@
 	</div>
 
 </div>
+
+<!-- 메뉴 선택 표시 -->
+<script type="text/javascript">
+	$(document).ready( function() {
+		$("#menu-item-806").addClass("current-menu-item");
+	});
+</script>

@@ -69,5 +69,11 @@ $(document).ready(function() {
 		$("#"+this.id+"-TABLE").show();
 	});
 });
+</script>
 
+<!-- 메뉴 선택 표시 -->
+<script type="text/javascript">
+	$(document).ready( function() {
+		$("#menu-item-836").addClass("current-menu-item");
+	});
 </script>

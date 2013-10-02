@@ -42,3 +42,9 @@
 	<div class="text-right muted"><small>이 페이지를 <?php echo arixWp_PostViews( get_the_ID(), 'display' ); ?>회 보았습니다.</small></div>
 </div>
 
+<!-- 메뉴 선택 표시 -->
+<script type="text/javascript">
+	$(document).ready( function() {
+		$("#menu-item-836").addClass("current-menu-item");
+	});
+</script>
