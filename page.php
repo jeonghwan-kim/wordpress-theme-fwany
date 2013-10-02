@@ -3,30 +3,24 @@
  * 페이지 분기 
  */
 
-
 get_header(); ?>
 
-
 <?php the_post(); ?>
-
+	
 <!-- 분석페이지 -->
-<?php if ($post->ID == 680): get_template_part( 'content-analysis', 'page' ); ?>
-
-<!-- CODE SNIPPETS -->
-<?php elseif ($post->ID == 834): get_template_part( 'content-codesnippets', 'page' ); ?>
+<?php if (strtoupper($post->post_title) == '분석') : 
+ 	get_template_part( 'content', 'analysis' ); ?>
 
 <!-- CODE SNIPPET list page -->
-<?php elseif ( (strtoupper($post->post_title) == 'CODE-SNIPPET') ||
-			   (strtoupper($post->post_title) == 'HTML') ||
-			   (strtoupper($post->post_title) == 'PHP') ||
-			   (strtoupper($post->post_title) == 'WORD-PRESS') ||
-			   (strtoupper($post->post_title) == 'CSS') )
-			   : get_template_part( 'content-codesnippets', 'page' ); ?>
+<?php elseif ( (strtoupper($post->post_title) == 'CODE SNIPPET') ||
+			 ( strtoupper( get_post($post->post_parent)->post_title) == 'CODE SNIPPET' ) ) :
+	get_template_part( 'content', 'codesnippets' ); ?>
 
 <!-- the CODE SNIPPET page -->
 <?php else: ?>
-	<?php get_template_part( 'content-codesnippet', 'page' ); ?>
+	<?php get_template_part( 'content', 'codesnippet' ); ?>
 	<?php comments_template(); ?>
+
 <?php endif;?>
 
 </div> <!-- span8 -->

@@ -21,10 +21,13 @@
 		<?php foreach ($sub_page_titles as $title) { ?>
 			<?php if ( strtoupper($title) == strtoupper($parent_title) ) : ?> 
 				<li id="<?php echo strtoupper($title); ?>" class="active"> 
+			
 			<?php else : ?>
 				<li id="<?php echo strtoupper($title); ?>" class=""> 
+			
 			<?php endif; ?>
-			<a style="cursor:pointer;" href="<?php echo home_url().'/code-snippet/'.$title; ?>"><?php echo strtoupper($title); ?></a></li>
+
+			<a style="cursor:pointer;" href="<?php echo home_url().'/code-snippet/'.$title; ?>"><?php echo strtoupper($title); ?></a></li> 
 		<?php } ?>
 	</ul>
 

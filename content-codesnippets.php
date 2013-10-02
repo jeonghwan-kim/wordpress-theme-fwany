@@ -26,9 +26,12 @@
 		<?php foreach ($sub_page_titles as $title) { ?>
 			<?php if ( strtoupper($title) == strtoupper($post_title) ) : ?> 
 				<li id="<?php echo strtoupper($title); ?>" class="active"> 
+			
 			<?php else : ?>
 				<li id="<?php echo strtoupper($title); ?>" class=""> 
+			
 			<?php endif; ?>
+			
 			<a style="cursor:pointer;"><?php echo strtoupper($title); ?></a></li>
 		<?php } ?>
 	</ul>
