@@ -36,7 +36,8 @@ input[type="submit"] {
 	padding: 11px 24px 10px;
 	text-decoration: none;
 }
-input[type="submit"]:focus {
+input[type="submit"]:focus,
+input[type="submit"]:hover {
 	background: #ed6a31; /* Old browsers */
 	background: -webkit-linear-gradient(top, #ed6a31 0%, #e55627 100%); /* Chrome 10+, Safari 5.1+ */
 	background:   linear-gradient(to bottom, #ed6a31 0%, #e55627 100%); /* W3C */
