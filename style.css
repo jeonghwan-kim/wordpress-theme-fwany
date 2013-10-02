@@ -1,0 +1,387 @@
+/**
+ * 기본 설정 
+ */ 
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+* {
+	font-family: 'Nanum Gothic', serif; 
+}
+a:hover {
+	text-decoration: none;
+}
+body {
+	background: rgb(250, 241, 201);
+	font-size: 18px;
+}
+p, li, blockquote, blockquote p {
+	line-height: 1.5em;
+} 
+p, ul, ol blockquote, blockquote p {
+	margin-bottom: 16px;
+}
+blockquote {
+	margin-left: 30px;
+	font-style: italic;
+	border-left: 10px solid #ccc;
+} 
+input[type="submit"] {
+	background: #e05d22; /* Old browsers */
+	background: -webkit-linear-gradient(top, #e05d22 0%, #d94412 100%); /* Chrome 10+, Safari 5.1+ */
+	background:   linear-gradient(to bottom, #e05d22 0%, #d94412 100%); /* W3C */
+	border: none;
+	border-bottom: 3px solid #b93207;
+	border-radius: 2px;
+	color: #fff;
+	display: inline-block;
+	padding: 11px 24px 10px;
+	text-decoration: none;
+}
+input[type="submit"]:focus {
+	background: #ed6a31; /* Old browsers */
+	background: -webkit-linear-gradient(top, #ed6a31 0%, #e55627 100%); /* Chrome 10+, Safari 5.1+ */
+	background:   linear-gradient(to bottom, #ed6a31 0%, #e55627 100%); /* W3C */
+	outline: none;
+}
+input[type="submit"]:active {
+	background: #d94412; /* Old browsers */
+	background: -webkit-linear-gradient(top, #d94412 0%, #e05d22 100%); /* Chrome 10+, Safari 5.1+ */
+	background:   linear-gradient(to bottom, #d94412 0%, #e05d22 100%); /* W3C */
+	border: none;
+	border-top: 3px solid #b93207;
+	padding: 10px 24px 11px;
+}
+textarea {
+	padding: 10px;
+	height: 40px;
+	transition: .3s;
+}
+.textarea-clicked {
+	font-size: 18px;
+	height: 100px;
+	transition: .3s;
+}
+
+
+/**
+ * 구조 
+ */ 
+.wrapper {
+	padding-top: 40px;
+}
+
+.table {
+	margin-bottom: 0px;
+}
+
+
+/**
+ * 메뉴 
+ */ 
+.menu {
+	display: block;
+	margin: 0;
+	list-style: none;
+}
+.title  {
+	/*font-family: serif, "Times New Roman", Times;*/
+	letter-spacing:-2px;
+	font-size: 34px;
+	font-weight: lighter;
+}
+#title2 {
+	display: none;
+}
+.menu-item:hover{
+	border-right: 10px solid #8a012f;
+}
+.current-menu-item {
+	border-right: 10px solid #8a012f;
+}
+.search-query {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+
+/**
+ * 박스 
+ */
+.the-box {
+	padding: 40px 40px;
+	margin-bottom: 20px;
+	position: relative;
+}
+.the-orenge-box {
+	background-color: #fb990e;
+	border-bottom: 10px solid #c37403;
+	color: white;
+}
+.the-orenge-box a {
+	color: white;
+}
+.the-orenge-box a:hover {
+	color: #c37403;
+}
+.the-white-box {
+	background-color: #ffffff;
+	border-bottom: 10px solid #cccccc;
+	color: black;
+}
+.the-red-box {
+	background-color: #ef0252;
+	border-bottom: 10px solid #8a012f;
+	color: white;
+}
+.the-red-box a {
+	color: white;
+}
+.the-red-box a:hover {
+	color: #8a012f;
+}
+
+.time-stamp {
+	color: #ccc;
+	position: absolute;
+	top: 0.75em;
+	right: 0.75em;
+	/*font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;*/
+	font-size: x-large;
+}
+.time-stamp p {
+	text-align: right;
+	margin:0;
+}
+
+/**
+ * 서재 
+ */
+.the-book {
+	float:left; 
+	width: 19%; /* 4권/줄 */
+	margin: 0 3% 5% 3%;
+	position:relative;
+	box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
+}
+.the-book img {
+	width: 100%;
+}
+.layered-title {
+	display:block;
+	position:absolute;
+	width:100%; 
+	top:50px;
+	word-break:break-all;
+	background:rgba(0,0,0,0.2); 
+}
+.layered-title span {
+	color:white; 
+	padding:2px 0;
+}
+.pagination {
+	clear:both;
+}
+
+
+/**
+ * 독후감 내용 부분 
+ */
+.book-content h1, 
+.book-content h2, 
+.book-content h3, 
+.book-content h4, 
+.book-content h5, 
+.book-content h6 {
+	font-size: 100%;
+	font-style: bold;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.book-content h1 {
+	border-bottom: solid 1px #ccc;
+}
+
+
+/** 
+ * 분석 페이지 
+ */
+#analysis-btn{
+	display: none;
+	position: absolute;
+	margin: -28px 0 0 400px;
+}
+.analysis .the-section { 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	padding-bottom: 10px;
+	margin-bottom: 40px;
+}
+#google-chart-author , #google-chart-publisher {
+	margin-top: 40px;
+	height: 200px;
+}
+#google-chart-month, #google-chart-year {
+	margin-top: 30px;
+}
+#recommend {
+	text-align: center;
+}
+#recommend .the-book {
+	width: 19%; /* 4권/줄 */
+	margin: 0 3% 5% 3%;
+}
+}
+#pre-recommend-books, #next-recommend-books {
+	display: none;
+}
+
+/**
+ * 통계페이지 하단 네비게이션 
+ */
+.nav-bottom {
+	margin-bottom: 1.625em;
+	clear: both;
+	text-align: center;
+}
+
+
+/**
+ * Code Snippets
+ */
+.table h4 {
+	margin: 2px 0px;
+}
+
+
+/**
+ * Comments
+ */
+.comment {
+	margin: 0 0 8px 0;
+	padding: 8px 12px;
+	background-color: #ffffff;
+	color: black;
+}
+.avatar-outer ,
+.comment-body {
+	float: left;
+}
+.comment-body {
+	width: 70%;
+	padding-left: 30px;
+}
+.comment-body .author {
+	padding: 0;
+	margin: 0;
+}
+.comment-body .date {
+	color: #aaa;
+	font-size: 70%;
+}
+.comment-body p {
+	line-height: 1.3em;
+	margin-bottom: 0;
+	font-size: 90%;
+}
+
+.comment-respond input[type=text] {
+	width: 100%;
+	box-sizing: border-box;
+	height: 30px;
+}
+input#submit {
+	padding: 10px;
+}
+
+
+/**
+ * Search
+ */
+.search-result-header {
+	border-margin: 1px grey solid;
+}
+
+
+/**
+ * footer
+ */
+.footer {
+	background: #000;
+	color: #fff;
+	padding: 50px 0;
+	font-size: 80%;
+}
+.footer a:hover {
+	color: #c37403;
+}
+.footer-left {
+	padding-left: 40px;
+	border-right: 10px solid rgba(255,255,255, 0.3);
+}
+
+
+/**
+ * Responsive Web
+ */
+
+@media (min-width: 1200px) {
+	.the-book {
+		width: 14%; /*6권/줄*/
+		margin: 0 1.3% 3% 1.3%;
+	}
+}
+
+@media (max-width: 979px) {
+	.wrapper {
+		padding: 20px 20px 0px 20px;
+	}
+
+	body {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.footer-left {
+		padding-left: 0;	
+		border-right: 0;
+	}
+	.footer-left li {
+		padding: 2px 0;
+	}
+
+}
+
+@media (max-width: 400px) {
+	.wrapper {
+		padding: 10px 10px 0px 10px;
+	}
+	.time-stamp {
+		font-size: 18px;
+	}
+	.book-content blockquote {
+		margin-left: 0px;
+	}
+	.the-box {
+		padding: 30px 20px;
+	}
+	.the-book {
+		width: 27%; /*3권/줄*/
+		margin: 0 3% 6% 3%;
+	}
+
+	.comment {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.comment-body {
+		width: 100%;
+		padding-left: 0;
+	}
+
+	.book-meta .author, .book-meta .publisher {
+		display: block;
+	}
+	.book-meta .author-and-publisher {
+		line-height: 0.8em;
+	}
+}
