@@ -61,7 +61,9 @@ textarea {
 	height: 100px;
 	transition: .3s;
 }
-
+code {
+	white-space: normal;
+}
 
 /**
  * 구조 
