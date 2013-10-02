@@ -641,3 +641,54 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 
 
+// 페이지뷰 카운터 
+// id = the post id and action = display or count 
+function arixWp_PostViews( $id, $action ) 
+{ 
+	$axCountMeta = 'ax_post_views'; // Your Custom field that stores the views 
+	
+	$axCount = get_post_meta($id, $axCountMeta, true); // 뷰 횟수 얻기
+	
+	// 카운트 정보가 없을 경우 
+	if ( $axCount == '' ) { 
+		delete_post_meta( $id, $axCountMeta ); 
+		add_post_meta( $id, $axCountMeta, 1 ); 
+		if ( $action == 'display' ) { 
+			return 1;
+		} 
+	} 
+
+	// 카운트 정보가 있을 경우
+	else { 
+		if ( $action == 'count' ) { 
+			$axCount++;
+			update_post_meta( $id, $axCountMeta, $axCount );
+		} 
+		else { 
+			return $axCount; 
+		} 
+	} 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

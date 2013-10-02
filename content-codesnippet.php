@@ -36,5 +36,9 @@
 
 	<!-- 내용출력  -->
 	<div><?php the_content(); ?></div>
+
+	<!-- 페이지 뷰 횟수 출력 -->
+	<?php arixWp_PostViews( get_the_ID(), 'count' ); ?>
+	<div class="text-right muted"><small>이 페이지를 <?php echo arixWp_PostViews( get_the_ID(), 'display' ); ?>회 보았습니다.</small></div>
 </div>
 
