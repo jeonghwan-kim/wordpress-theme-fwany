@@ -30,8 +30,8 @@
 			<p><strong>Fwany-fwany</strong> is created, written by, and maintained by 
 			<a href="https://www.facebook.com/jeonghwan.kim1"><strong>Jeonghwan Kim</strong></a>.</p>
 			
-			<p>It is built on WordPress and the the theme files are 
-				<a href="https://github.com/jeonghwan-kim"><strong>Github</strong></a>, 
+			<p>It is built on WordPress and the the theme files are in
+				<a href="https://github.com/jeonghwan-kim/wordpress-theme-fwany.git"><strong>Github</strong></a>, 
 				and it's design is subject to 
 				<a href="http://chriscoyier.net/"><strong>Chris Coyier's blog</strong></a>.</p>
 
