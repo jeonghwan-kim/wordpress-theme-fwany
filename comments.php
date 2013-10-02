@@ -94,7 +94,7 @@ if ( post_password_required() )
 		$("textarea").click( function() {
 			$(this).addClass("textarea-clicked");
 		});
-		$("textarea").focusf( function() {
+		$("textarea").focus( function() {
 			$(this).addClass("textarea-clicked");
 		});
 		$("textarea").focusout( function() {
