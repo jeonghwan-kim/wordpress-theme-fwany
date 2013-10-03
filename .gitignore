@@ -4,3 +4,5 @@ ajax/api-key.php
 *.sublime-project
 
 *.sublime-workspace
+
+content-index 시간측정.php
