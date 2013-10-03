@@ -114,10 +114,17 @@ code {
 	margin-bottom: 20px;
 	position: relative;
 }
+.the-box-packed {
+	padding: 0px;
+	margin-bottom: 20px;
+	position: relative;
+}
 .the-orenge-box {
 	background-color: #fb990e;
-	border-bottom: 10px solid #c37403;
 	color: white;
+}
+.the-box-bottom-orenge {
+	border-bottom: 10px solid #c37403;
 }
 .the-orenge-box a {
 	color: white;
@@ -127,13 +134,17 @@ code {
 }
 .the-white-box {
 	background-color: #ffffff;
-	border-bottom: 10px solid #cccccc;
 	color: black;
+}
+.the-box-bottom-white {
+	border-bottom: 10px solid #cccccc;
 }
 .the-red-box {
 	background-color: #ef0252;
-	border-bottom: 10px solid #8a012f;
 	color: white;
+}
+.the-box-bottom-red {
+	border-bottom: 10px solid #8a012f;
 }
 .the-red-box a {
 	color: white;
@@ -154,6 +165,46 @@ code {
 	text-align: right;
 	margin:0;
 }
+
+
+
+/**
+ * index 화면
+ */
+.the-box-packed ul {
+	padding: 10px;
+}
+.box-header-orenge {
+	background: #c37403;
+	font-size: 80%;
+	padding: 0 10px;
+}
+.box-header-red {
+	background: #8a012f;
+	font-size: 80%;
+	padding: 0 10px;
+}
+.the-box-packed .the-book {
+	width: 23%;
+	margin: 3% 5%;
+}
+.box-header-white {
+	background: #cccccc;
+	font-size: 80%;
+	padding: 0 10px;
+}
+.the-box-packed .post-title {
+	white-space:nowrap; 
+	overflow: hidden;
+	text-overflow:ellipsis; 
+}
+.the-box .table {
+	font-size: 80%;
+}
+.label-orenge {
+	background: #c37403;
+}
+
 
 /**
  * 서재 

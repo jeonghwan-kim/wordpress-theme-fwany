@@ -17,16 +17,10 @@
 get_header(); ?>
 
 <?php if ( have_posts() ) : ?>
-	
-	<?php /* The loop */ ?>
-	<?php while ( have_posts() ) : the_post(); ?>
-		<?php get_template_part( 'content', 'bookshelf' ); ?>
 
-	<?php endwhile; ?>
+	<?php get_template_part( 'content', 'index' ); ?>
 
 <?php endif; ?>
-
-<?php pagination(); ?>
 
 
 </div> <!-- span8 -->

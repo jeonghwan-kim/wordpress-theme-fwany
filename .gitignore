@@ -1,2 +1,6 @@
 
 ajax/api-key.php
+
+*.sublime-project
+
+*.sublime-workspace

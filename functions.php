@@ -619,7 +619,8 @@ function pagination() {
  */
 function get_sub_page_titles($page_id) {
 	$children = get_pages(array( 'child_of' => '834', 'parent' => -1) );
-	 $sub_page_titles = array(); 
+	$sub_page_titles = array(); 
+	
 	foreach ($children as $child) {
 		if ($child->post_parent == $page_id):
 			array_push($sub_page_titles, $child->post_title);
@@ -641,8 +642,10 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 
 
-// 페이지뷰 카운터 
-// id = the post id and action = display or count 
+/**
+ * 페이지뷰 카운터 
+ * id = the post id and action = display or count 
+ */
 function arixWp_PostViews( $id, $action ) 
 { 
 	$axCountMeta = 'ax_post_views'; // Your Custom field that stores the views 
@@ -671,7 +674,65 @@ function arixWp_PostViews( $id, $action )
 }
 
 
+function post_limit() {
+    return 'LIMIT 0, 10';
+}
+function get_popular_posts() {
+    add_filter( 'post_limits', 'post_limit' ); 
 
+    $args = array(    
+            'post_type'     => 'page',
+            'post_status'   => 'publish',
+            'order'     => 'DESC',
+            'orderby'   => 'meta_value',
+            'meta_key'  => 'ax_post_views' );
+    $posts = new WP_Query( $args );
+    
+    // The Loop
+    if ( $posts->have_posts() ) :
+        $result = array();
+        while ( $posts->have_posts() ) : $posts->the_post();
+            $id = get_the_ID();
+            $title = get_the_title( $id );
+            $count = get_post_meta( $id, 'ax_post_views', true);
+            $permalink = get_permalink( $id );
+            array_push( $result, array( 
+                'id' => $id, 
+                'title' => $title, 
+                'count' => $count,
+                'permalink' => $permalink) 
+            );
+        endwhile;
+    endif; 
+
+    /* Restore original Post Data and remove filer */
+    wp_reset_postdata();
+    remove_filter( 'post_limits', 'post_limit' ); 
+
+    return $result;
+}
+
+/**
+ * 코드스니핏 페이지에 있는 리프 페이지 갯수를 센다.
+ */
+function count_leaf_pages( $page_title ) {
+	$page_id = get_page_by_title($page_title)->ID;
+	$pages = get_pages(array( 'child_of' => $page_id, 'parent' => -1) );
+
+	// 자식 페이지만 추출한다.
+	$leaf_page_count = 0;
+	foreach ($pages as $page) :
+		$count = get_pages(array( 'child_of' => $page->ID, 'parent' => -1) );
+		if ( $count ) : continue;
+		else : $leaf_page_count++;
+		endif;
+	endforeach;
+
+	return $leaf_page_count;
+}
+
+
+?>
 
 
 

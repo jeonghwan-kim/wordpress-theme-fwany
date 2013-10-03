@@ -45,14 +45,14 @@
 	<div class="container-fluid wrapper">
 		<div class="row-fluid">
 			<div class="span4">
-				<div class="the-box the-orenge-box">
+				<div class="the-box the-orenge-box the-box-bottom-orenge">
 					<h1 class="title"><a href="<?php echo home_url(); ?>">
 						<?php bloginfo( 'name' ); ?></a></h1>
 					<p class="lead">The Blog written by Jeonghwan Kim</p>
 					<?php get_search_form(); ?>
 				</div>
 
-				<div class="the-box the-red-box">
+				<div class="the-box the-red-box the-box-bottom-red">
 					<?php wp_nav_menu( array('before' => '<h3>', 'after' => '</h3>') ); ?>
 				</div>
 			</div>
