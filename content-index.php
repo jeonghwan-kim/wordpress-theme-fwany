@@ -19,16 +19,16 @@
 
         $posts = wp_get_recent_posts( $args, OBJECT );
     ?>
-    <div class="the-box-packed the-orenge-box">
+    <div  class="the-box-packed the-orenge-box">
     	<div class="box-header-orenge">RECENT CODE SNIPPETS</div>
 
     	<ul class="unstyled">
     	<?php foreach ($posts as $post) : ?>
     		<li>
     			<div class="post-title">
-    			<span class="label label-orenge"><?php echo strtoupper(get_post($post->post_parent)->post_title); ?></span>
-    			<small><a href="<?php echo $post->guid; ?>"><?php echo $post->post_title; ?></a></small>
-    			<!-- <span class="muted"><small><?php echo Date('y/m/d', strtotime($post->post_modified)); ?></small></span> -->
+        			<span class="label label-orenge"><?php echo strtoupper(get_post($post->post_parent)->post_title); ?></span>
+        			<small><a href="<?php echo $post->guid; ?>"><?php echo $post->post_title; ?></a></small>
+        			<!-- <span class="muted"><small><?php echo Date('y/m/d', strtotime($post->post_modified)); ?></small></span> -->
     	   		</div>
     	   </li>
     	<?php endforeach; ?>

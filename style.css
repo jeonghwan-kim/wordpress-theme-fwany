@@ -94,12 +94,17 @@ code {
 #title2 {
 	display: none;
 }
-.menu-item:hover{
-	border-right: 10px solid #8a012f;
+.menu-item h3{
+	padding-left: 10px;
+	border-radius: 10px 0 0 10px;
+	-webkit-transition: all 0.3s ease;
 }
-.current-menu-item {
+.menu-item h3:hover, 
+.current-menu-item h3 {
 	border-right: 10px solid #8a012f;
+	background: rgba(255,255,255,0.4);
 }
+
 .search-query {
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -148,6 +153,7 @@ code {
 }
 .the-red-box a {
 	color: white;
+	transition: all 0.3s ease;
 }
 .the-red-box a:hover {
 	color: #8a012f;
@@ -204,7 +210,17 @@ code {
 .label-orenge {
 	background: #c37403;
 }
+.the-orenge-box ul li a{
+	padding: 4px;
+	transition: all 0.2s ease;
+}
+.the-orenge-box ul li a:hover {
+	border-radius: 10px;
+	background: rgba(255,255,255,0.7);
+	padding-left: 20px;
+	padding-right: 20px;
 
+}
 
 /**
  * 서재 
@@ -357,8 +373,14 @@ input#submit {
 	padding: 50px 0;
 	font-size: 80%;
 }
+.footer a {
+	transition: all 0.3s ease;
+	border-radius: 10px;
+	padding: 5px;
+}
 .footer a:hover {
 	color: #c37403;
+	background: rgba(255,255,255,0.3);
 }
 .footer-left {
 	padding-left: 40px;
