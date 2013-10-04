@@ -54,11 +54,17 @@ input[type="submit"]:active {
 textarea {
 	padding: 10px;
 	height: 40px;
+	-webkit-transition: .3s;
+	-moz-transition: .3s;
+	-o-transition: .3s;
 	transition: .3s;
 }
 .textarea-clicked {
 	font-size: 18px;
 	height: 100px;
+	-webkit-transition: .3s;
+	-moz-transition: .3s;
+	-o-transition: .3s;
 	transition: .3s;
 }
 code {
@@ -98,6 +104,9 @@ code {
 	padding-left: 10px;
 	border-radius: 10px 0 0 10px;
 	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 .menu-item h3:hover, 
 .current-menu-item h3 {
@@ -153,6 +162,9 @@ code {
 }
 .the-red-box a {
 	color: white;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
 .the-red-box a:hover {
@@ -164,7 +176,6 @@ code {
 	position: absolute;
 	top: 0.75em;
 	right: 0.75em;
-	/*font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;*/
 	font-size: x-large;
 }
 .time-stamp p {
@@ -212,15 +223,19 @@ code {
 }
 .the-orenge-box ul li a{
 	padding: 4px;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 .the-orenge-box ul li a:hover {
 	border-radius: 10px;
+	background: #fff;
 	background: rgba(255,255,255,0.7);
 	padding-left: 20px;
 	padding-right: 20px;
-
 }
+
 
 /**
  * 서재 
