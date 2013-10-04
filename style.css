@@ -184,6 +184,112 @@ code {
 }
 
 
+/** 
+ * Nav
+ */
+.post-it {
+	padding-left: 30px;
+	padding-top: 50px;
+	margin-bottom: -20px;
+}
+.post-it > li{
+	list-style: none;
+	float: left;
+	width: 120px;
+	overflow: hidden;
+	text-decoration: none;
+	position: relative;
+	margin-left: -55px;
+	box-shadow: 2px 0px 1px rgba(0,0,0,0.5);
+
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	transform-origin: top left;
+
+	-webkit-transform: rotate(-40deg);
+	-moz-transform: rotate(-40deg);
+	-o-transform: rotate(-40deg);
+	transform: rotate(-40deg);
+
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.post-it > li > a {
+	font-size: 90%;
+	color: white;
+	display: block;
+	width: 100%;
+	padding: 5px 20px;
+	white-space:nowrap; 
+	font-family: Impact "Trebuchet MS" ;
+	text-decoration: none;
+}
+.post-it > li.active {
+	z-index: 2;
+}
+.post-it > li:hover,
+.post-it > li:focus {
+	box-shadow: 10px 0px 6px rgba(0,0,0,0.5);
+}
+
+.post-it > li:nth-child(1) {
+	background: #FF0000;
+}
+	.post-it > li:nth-child(2) {
+	background: #FF3300;
+}
+.post-it  > li:nth-child(3) {
+	background: #FFCC00;
+}
+.post-it  > li:nth-child(4) {
+	background: #009933;
+}
+.post-it  > li:nth-child(5) {
+	background: #0066CC;
+}
+.post-it  > li:nth-child(6) {
+	background: #000099;
+}
+.post-it  > li:nth-child(7) {
+	background: #9900CC;
+}
+.post-it  > li:nth-child(8) {
+	background: #000000;
+}
+.post-it::after {
+	content: "";
+	display:block;
+	clear:both;
+}
+/*@media (max-width:617) {
+	.post-it {
+		padding-left: 0px;
+		padding-top: 0px;
+	}
+	.post-it > li {
+		clear: both;
+		width: 100%;
+		margin-left:0;
+
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	.post-it > li:hover,
+	.post-it > li:focus {
+		box-shadow: 0px -6px 10px rgba(0,0,0,0.5);
+	}
+	.post-it > li > a {
+		text-align: center;
+		padding-left: 0px;
+	}
+} */
+
+
 
 /**
  * index 화면
@@ -470,3 +576,44 @@ input#submit {
 		line-height: 0.8em;
 	}
 }
+
+
+@media (max-width: 920px) {
+	
+	.post-it {
+		padding-left: 0px;
+		padding-top: 0px;
+		margin-left: 0px;
+		margin-bottom: 10px;
+
+	}
+	.post-it > li {
+		clear: both;
+		width: 100%;
+		margin-left:0;
+
+		-webkit-transform-origin: bottom left;
+		-moz-transform-origin: bottom left;
+		-o-transform-origin: bottom left;
+		transform-origin: bottom left;
+		
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	.post-it > li:hover,
+	.post-it > li:focus {
+		box-shadow: 0px -6px 10px rgba(0,0,0,0.5);
+	}
+	.post-it > li > a {
+		text-align: center;
+		padding-left: 0px;
+	}
+	.post-it .active {
+		-webkit-transform: skew(-20deg);
+		-moz-transform: skew(-20deg);
+		-o-transform: skew(-20deg);
+		transform: skew(-20deg);
+	}
+} 

@@ -15,27 +15,26 @@
 <?php $sub_page_titles = get_sub_page_titles($post->post_parent); ?>
 <?php endif; ?>
 
-<div id="codesnippets" class="the-box the-white-box">
-	
-	<!-- 네비게이션  -->
-	<ul class="nav nav-pills">
-		<?php $post_title = $post->post_title; ?>
-		<?php if (strtoupper($post_title) == 'CODE SNIPPET') : $post_title = 'CSS'; ?>
+<!-- 네비게이션  -->
+<ul class="post-it">
+	<?php $post_title = $post->post_title; ?>
+	<?php if (strtoupper($post_title) == 'CODE SNIPPET') : $post_title = 'CSS'; ?>
+	<?php endif; ?>
+
+	<?php foreach ($sub_page_titles as $title) { ?>
+		<?php if ( strtoupper($title) == strtoupper($post_title) ) : ?> 
+			<li id="<?php echo strtoupper($title); ?>" class="active"> 
+		
+		<?php else : ?>
+			<li id="<?php echo strtoupper($title); ?>" class=""> 
+		
 		<?php endif; ?>
+		
+		<a style="cursor:pointer;"><?php echo strtoupper($title); ?></a></li>
+	<?php } ?>
+</ul>
 
-		<?php foreach ($sub_page_titles as $title) { ?>
-			<?php if ( strtoupper($title) == strtoupper($post_title) ) : ?> 
-				<li id="<?php echo strtoupper($title); ?>" class="active"> 
-			
-			<?php else : ?>
-				<li id="<?php echo strtoupper($title); ?>" class=""> 
-			
-			<?php endif; ?>
-			
-			<a style="cursor:pointer;"><?php echo strtoupper($title); ?></a></li>
-		<?php } ?>
-	</ul>
-
+<div id="codesnippets" class="the-box the-white-box">
 	<!-- 리스트 출력  -->
 	<?php foreach ($sub_page_titles as $title) { ?>
 		<table class="table table-striped" id="<?php echo strtoupper($title).'-TABLE'; ?>" >
@@ -47,9 +46,7 @@
 					<?php echo $page->post_title; ?></a></h4></td></tr>
 			<?php } ?>
 		</table>
-
 	<?php } ?>
-
 </div>
 
 <script type="text/javascript">

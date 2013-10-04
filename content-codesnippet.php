@@ -13,24 +13,23 @@
 
 <!-- 하위 페이지 리스트를 얻는다. -->
 <?php $sub_page_titles = get_sub_page_titles(get_page_by_title('Code snippet')->ID); ?>
+	
+<!-- 네비게이션  -->
+<ul class="post-it">
+	<?php foreach ($sub_page_titles as $title) { ?>
+		<?php if ( strtoupper($title) == strtoupper($parent_title) ) : ?> 
+			<li id="<?php echo strtoupper($title); ?>" class="active"> 
+		
+		<?php else : ?>
+			<li id="<?php echo strtoupper($title); ?>" class=""> 
+		
+		<?php endif; ?>
+
+		<a style="cursor:pointer;" href="<?php echo home_url().'/code-snippet/'.$title; ?>"><?php echo strtoupper($title); ?></a></li> 
+	<?php } ?>
+</ul>
 
 <div class="the-box the-white-box">
-	
-	<!-- 네비게이션  -->
-	<ul class="nav nav-pills">
-		<?php foreach ($sub_page_titles as $title) { ?>
-			<?php if ( strtoupper($title) == strtoupper($parent_title) ) : ?> 
-				<li id="<?php echo strtoupper($title); ?>" class="active"> 
-			
-			<?php else : ?>
-				<li id="<?php echo strtoupper($title); ?>" class=""> 
-			
-			<?php endif; ?>
-
-			<a style="cursor:pointer;" href="<?php echo home_url().'/code-snippet/'.$title; ?>"><?php echo strtoupper($title); ?></a></li> 
-		<?php } ?>
-	</ul>
-
 	<!-- 제목 -->
 	<div class="page-header"><h1><?php echo get_the_title(); ?></h1></div>
 
