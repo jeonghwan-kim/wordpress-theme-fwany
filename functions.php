@@ -730,26 +730,4 @@ function count_leaf_pages( $page_title ) {
 
 	return $leaf_page_count;
 }
-
-
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
