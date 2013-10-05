@@ -189,7 +189,7 @@ code {
  */
 .post-it {
 	padding-left: 30px;
-	padding-top: 50px;
+	padding-top: 40px;
 	margin-bottom: -20px;
 }
 .post-it > li{
@@ -224,6 +224,10 @@ code {
 .post-it > li:focus,
 .post-it > li.active {
 	box-shadow: 10px 0px 6px rgba(0,0,0,0.5);
+	-webkit-transform: rotate(-40deg) scalex(.95);
+	-mox-transform: rotate(-40deg) scalex(.95);
+	-o-transform: rotate(-40deg) scalex(.95);
+	transform: rotate(-40deg) scalex(.95);
 }
 .post-it > li > a {
 	font-size: 90%;
@@ -301,18 +305,23 @@ code {
 		transform: rotate(0deg);
 	}
 	.post-it > li:hover,
-	.post-it > li:focus {
-		box-shadow: 0px -6px 10px rgba(0,0,0,0.5);
-	}
-	.post-it > li > a {
-		text-align: center;
-		padding-left: 0px;
-	}
-	.post-it .active {
+	.post-it > li:focus,
+	.post-it > li.active {
+		box-shadow: 2px 0px 1px rgba(0,0,0,0.5);
+
+		-webkit-transform: rotate(0deg) scalex(1);
+		-mox-transform: rotate(0deg) scalex(1);
+		-o-transform: rotate(0deg) scalex(1);
+		transform: rotate(0deg) scalex(1);
+		
 		-webkit-transform: skew(-20deg);
 		-moz-transform: skew(-20deg);
 		-o-transform: skew(-20deg);
 		transform: skew(-20deg);
+	}
+	.post-it > li > a {
+		text-align: center;
+		padding-left: 0px;
 	}
 } 
 
