@@ -16,9 +16,9 @@ get_header(); ?>
 			 ( strtoupper( get_post($post->post_parent)->post_title) == 'CODE SNIPPET' ) ) :
 	get_template_part( 'content', 'codesnippets' ); ?>
 
-<!-- the CODE SNIPPET page -->
+<!-- the Default page -->
 <?php else: ?>
-	<?php get_template_part( 'content', 'codesnippet' ); ?>
+	<?php get_template_part( 'content' ); ?>
 	<?php comments_template(); ?>
 
 <?php endif;?>

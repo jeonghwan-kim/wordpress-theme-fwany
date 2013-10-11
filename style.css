@@ -205,16 +205,19 @@ code {
 	-webkit-transform-origin: top left;
 	-moz-transform-origin: top left;
 	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
 	transform-origin: top left;
 
 	-webkit-transform: rotate(-40deg);
 	-moz-transform: rotate(-40deg);
 	-o-transform: rotate(-40deg);
+	-ms-transform: rotate(-40deg);
 	transform: rotate(-40deg);
 
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
 .post-it > li.active {
@@ -227,6 +230,7 @@ code {
 	-webkit-transform: rotate(-40deg) scalex(.95);
 	-mox-transform: rotate(-40deg) scalex(.95);
 	-o-transform: rotate(-40deg) scalex(.95);
+	-ms-transform: rotate(-40deg) scalex(.95);
 	transform: rotate(-40deg) scalex(.95);
 }
 .post-it > li > a {
@@ -243,6 +247,7 @@ code {
 	-webkit-transition: all .3s ease;
 	-moz-transition: all .3s ease;
 	-o-transition: all .3s ease;
+	-ms-transition: all .3s ease;
 	transition: all .3s ease;
 }
 .post-it > li > a:hover,
@@ -503,9 +508,9 @@ code {
 }
 
 .comment-respond input[type=text] {
-	width: 100%;
-	box-sizing: border-box;
-	height: 30px;
+	/*width: 100%;*/
+	/*box-sizing: border-box;*/
+	/*height: 30px;*/
 }
 input#submit {
 	padding: 10px;
