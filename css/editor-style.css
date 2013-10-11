@@ -1,6 +1,6 @@
 /*
-Theme Name: Twenty Thirteen
-Description: Used to style the TinyMCE editor.
+Theme Name: Fwany
+Description: Used to style the Fwany editor.
 */
 
 
@@ -25,6 +25,8 @@ Description: Used to style the TinyMCE editor.
  * ----------------------------------------------------------------------------
  */
 
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
 html .mceContentBody {
 	font-size: 100%;
 	max-width: 604px;
@@ -32,10 +34,11 @@ html .mceContentBody {
 
 body {
 	color: #141412;
-	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-family: 'Nanum Gothic', serif; 
 	line-height: 1.5;
-	text-rendering: optimizeLegibility;
-	vertical-align: baseline;
+	font-size: 18px;
+	/*text-rendering: optimizeLegibility;*/
+	/*vertical-align: baseline;*/
 }
 
 
@@ -43,46 +46,14 @@ body {
  * 2.0 Headings
  * ----------------------------------------------------------------------------
  */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	clear: both;
-	font-family: Bitter, Georgia, serif;
-	line-height: 1.3;
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-style: bold;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
-
 h1 {
-	font-size: 48px;
-	margin: 33px 0;
-}
-
-h2 {
-	font-size: 30px;
-	margin: 25px 0;
-}
-
-h3 {
-	font-size: 22px;
-	margin: 22px 0;
-}
-
-h4 {
-	font-size: 20px;
-	margin: 25px 0;
-}
-
-h5 {
-	font-size: 18px;
-	margin: 30px 0;
-}
-
-h6 {
-	font-size: 16px;
-	margin: 36px 0;
+	border-bottom: solid 1px #ccc;
 }
 
 hr {
@@ -98,137 +69,17 @@ hr {
  * 3.0 Text Elements
  * ----------------------------------------------------------------------------
  */
-
-p {
-	margin: 0 0 24px;
+p, li, blockquote, blockquote p {
+	line-height: 1.5em;
+} 
+p, ul, ol blockquote, blockquote p {
+	margin-bottom: 16px;
 }
-
-ol,
-ul {
-	margin: 16px 0;
-	padding: 0 0 0 40px;
-}
-
-ul {
-	list-style-type: square;
-}
-
-ol {
-	list-style: decimal outside;
-}
-
-li > ul,
-li > ol {
-	margin: 0;
-}
-
-dl {
-	margin: 0 20px;
-}
-
-dt {
-	font-weight: bold;
-}
-
-dd {
-	margin: 0 0 20px;
-}
-
-strong {
-	font-weight: bold;
-}
-
-code,
-kbd,
-pre,
-samp {
-	font-family: monospace, serif;
-	font-size: 14px;
-}
-
-pre {
-	background: #f5f5f5;
-	color: #666;
-	font-family: monospace;
-	font-size: 14px;
-	margin: 20px 0;
-	overflow: auto;
-	padding: 20px;
-	white-space: pre;
-	white-space: pre-wrap;
-	word-wrap: break-word;
-}
-
-blockquote,
-q {
-	quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-	content: "";
-	content: none;
-}
-
 blockquote {
-	font-size: 24px;
+	margin-left: 30px;
 	font-style: italic;
-	font-weight: 300;
-	margin: 24px 40px;
-}
-
-blockquote blockquote {
-	margin-right: 0;
-}
-
-blockquote cite,
-blockquote small {
-	font-size: 14px;
-	font-weight: normal;
-	text-transform: uppercase;
-}
-
-cite {
-	border-bottom: 0;
-}
-
-abbr[title] {
-	border-bottom: 1px dotted;
-}
-
-address {
-	font-style: italic;
-	margin: 0 0 24px;
-}
-
-del {
-	color: #333;
-}
-
-ins {
-	background: #fff9c0;
-	border: none;
-	color: #333;
-	text-decoration: none;
-}
-
-sub,
-sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
-}
-
-sup {
-	top: -0.5em;
-}
-
-sub {
-	bottom: -0.25em;
-}
+	border-left: 10px solid #ccc;
+} 
 
 
 /**
@@ -237,12 +88,12 @@ sub {
  */
 
 a {
-	color: #ca3c08;
+	color: #08c;
 	text-decoration: none;
 }
 
 a:visited {
-	color: #ac0404;
+	color: #08c;
 }
 
 a:focus {
@@ -251,7 +102,7 @@ a:focus {
 
 a:active,
 a:hover {
-	color: #ea9629;
+	color: #08c;
 	outline: 0;
 }
 

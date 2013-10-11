@@ -730,4 +730,14 @@ function count_leaf_pages( $page_title ) {
 
 	return $leaf_page_count;
 }
+
+/**
+ * 에디터 스타일 시트 추가
+ */
+function fwany_add_editor_styles() {
+	add_editor_style( 'css/editor-style.css' );
+}
+add_action( 'init', 'fwany_add_editor_styles');
+
+
 ?>
