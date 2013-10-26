@@ -32,7 +32,7 @@
 	<!-- Jquery -->
 	<script src="http://code.jquery.com/jquery.js"></script>
 
-	<!-- Twitter boostrap -->
+	<!-- Twitter bootstrap -->
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/bootstrap-responsive.min.css" />
 	<script type="text/javascript" src="<?php bloginfo('template_url');?>/js/bootstrap.min.js"></script>
@@ -48,7 +48,7 @@
 				<div class="the-box the-orenge-box the-box-bottom-orenge">
 					<h1 class="title"><a href="<?php echo home_url(); ?>">
 						<?php bloginfo( 'name' ); ?></a></h1>
-					<p class="lead">The Blog written by Jeonghwan Kim</p>
+					<p class="lead"><?php bloginfo( 'description' ); ?></p>
 					<?php get_search_form(); ?>
 				</div>
 
